@@ -1,0 +1,172 @@
+class computer:
+    def __init__(self):
+        self.name = "Rahul"
+        self.last = "Shinde"
+
+
+c1=computer()
+c2=computer()
+
+print(c1.name,"",c1.last)
+print(c2.name,"",c2.last)
+
+
+#In above above case both obj printing same result.
+#you can change the variable value as well using below method
+============================================================================================================
+class computer:
+    def __init__(self):
+        self.name = "Rahul"
+        self.last = "Shinde"
+
+
+c1=computer()
+c2=computer()
+
+c1.name="Shailesh"
+c1.last="Jadhav"
+
+print(c1.name, c1.last)
+
+
+#use of self :- when you created the more than one obj and if you want to call any method/class using that obj
+then self value is helping us to finger out which obj to assign the value.
+
+
+class computer:
+    def __init__(self):
+        self.name = "Rahul"
+        self.age = 25
+     
+	def update(self):
+	    self.age=27
+
+
+c1=computer()
+c2=computer()
+
+c1.name="Shailesh"
+c1.age=29
+
+print(c1.name, c1.age)
+
+
+
+================================================================================================================
+
+Compare two value using class:-
+
+
+class computer:
+    def __init__(self):
+        self.name = "Rahul"
+        self.age = 25
+
+    def update(self):
+        self.age=27
+
+    def compare(self,a,b):
+        if a == b:
+            print("same age")
+        else:
+            print("Having diff age")
+
+
+c1=computer()
+c2=computer()
+
+c1.name="Shailesh"
+c1.age=29
+c1.update()
+
+c1.compare(c1.age,c2.age)
+
+print(c1.name, c1.age)
+
+===================================================================================================
+
+Variablein class :-
+
+1) Instance variable:-
+the value of variable is instance mean we can change the value of variable as per obj.
+the value of obj car1 change to mil=20
+so we can called car1 as instance variable.
+
+Note:-  if you define a varibale inside the __init__ then it become instance variable.
+        if you define variable outside the class then it become class variable
+
+
+e.g 1)
+
+class car:
+    def __init__(self):
+        self.mil=10
+        self.company="BMW"
+
+car1=car()
+car2=car()
+
+car1.mil=20
+
+print(car1.mil,car2.mil)
+print(car1.company,car2.company)
+
+O/P:-
+
+20 10
+BMW BMW
+
+================================================================================================================
+
+
+2) Class variable:-
+Note:-  if you define a variable inside the __init__ then it become instance variable.
+        if you define variable outside the class then it become class variable
+		wheels=4 is the class variable.
+
+class car:
+    wheels=4
+    def __init__(self):
+        self.mil=10
+        self.company="BMW"
+
+car1=car()
+car2=car()
+
+car1.mil=20
+
+print(car1.mil,car2.mil,car2.wheels,car1.wheels)
+print(car1.company,car2.company)
+
+
+============================================================================================================
+
+3) changing class variable value:-
+
+
+class car:
+    wheels=4
+    def __init__(self):
+        self.mil=10
+        self.company="BMW"
+
+car1=car()
+car2=car()
+
+car1.mil=20
+#changing the value of wheels(class variable) which reflect to all obj.
+#for chnaging the value of class variable you can use class name
+#or else obj.variable_name for obj it will reflect for only obj but class it will reflect for every obj
+
+
+car.wheels=8
+print(car1.mil,car1.company,car1.wheels)
+print(car2.mil,car2.company,car2.wheels)
+
+O/P:-
+
+>>> 
+============ RESTART: C:/RAHUL86/RAHUL/ETLHIVE/OOPS/class_pra.py ============
+20 BMW 8
+10 BMW 8
+>>> 

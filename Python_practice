@@ -1,0 +1,871 @@
+numbers=[start:end:skip_by]
+        -5-4-3-2-1  
+numbers=[1,2,3,4,5]
+         0,1,2,3,4
+		 
+Skip_by:- will get skip by 1 if you mention skip_by = 2
+for skip_by = 3 ; will get skip by 2
+
+decrement the one element from skip_by.
+
+
+if you want to print [1,5] in O/P then you will have to use below syntax.
+
+numbers[0:5:4]
+[1,5]
+
+print[2,4]
+
+numbers[1:5:2]
+
+
+
+e.g 1)
+
+numbers[0:3:4]
+[1]
+
+
+Reverse order
+numbers[::-1]
+[5,4,3,2,1]
+
+
+reverse order slicing.
+numbers[-1:-6:-2]
+[5,3,1]
+
+
+print[2,4]:-
+
+numbers[-4:4:2]
+[2,4]
+
+=======================================================================================================================
+
+
+numbers_1=[1,2,3,[4,5,6]]
+           0,1,2,3
+print[5]:-
+
+numbers_1[3][1]
+
+
+
+===================================================================================================================
+
+numbers_2=[1,2,3,[4,5,6],[7,8,9,[11,12]]]
+
+print[12]:--?
+
+numbers_2[4][3][1]
+
+for reverse order numbers_2[-1]:-
+
+[7,8,9,[11,12]]
+
+==================================================================
+
+dir(list)
+it will show all function
+
+help(list.remove)
+will show how function will get run
+
+
+
+Practice
+
+pop:- last element will get remove
+append :- append will get add new element
+insert :- insert new element in list with mention index
+remove :- to remove the element with mention name.
+
+mention
+dir(list)
+isinstance(number,int) :- O/P in True and False
+input()
+
+
+
+=============================================================================================
+
+set :- it will store unique value.
+
+Name= {"Rahul","Rahul",14,1,2,3}
+
+Name
+{"Rahul",14,1,2,3}
+
+
+====================================================================================================
+
+Assignment:
+
+
+>>> name
+['Rahul', [1, 2, 3, 4], 'Shinde', 14, 1, 'Jan', ('Amdocs', 'Virtusa'), {'Birth': 'Mumbai', 'Work': 'Pune'}]
+
+
+list all option:-
+
+
+list clear function:-
+ to clear all element/value in list
+ 
+>>> name2
+			       
+['Rahul', [1, 2, 3, 4], 'Shinde', 14, 1, 'Jan', ('Amdocs', 'Virtusa'), {'Birth': 'Mumbai', 'Work': 'Pune'}]
+>>> name2.clear()
+			       
+>>> name2
+			       
+[]
+
+
+
+Copy function:-
+to copy all data from one list to other list
+name2=name.copy()
+
+
+
+count function:-
+to count the number of element in list
+>>> name2.count(2)
+			       
+0
+>>> name2.count("Rahul")
+			       
+1
+>>> 
+
+
+Index Function:-
+to check the element index value in list.
+>>> name.index("Jan")
+			       
+5
+>>> 
+
+
+
+Remove function:-
+to remove the element from list:-
+>>> name2
+			       
+['Rahul', [1, 2, 3, 4], 'Shinde', 14, 1, 'Jan', ('Amdocs', 'Virtusa'), {'Birth': 'Mumbai', 'Work': 'Pune'}]
+>>> name2.remove("Shinde")
+			       
+>>> name2
+			       
+['Rahul', [1, 2, 3, 4], 14, 1, 'Jan', ('Amdocs', 'Virtusa'), {'Birth': 'Mumbai', 'Work': 'Pune'}]
+>>> 
+
+
+Pop Function:-
+it will last element from list and remove it permanetly.
+
+Note:- for dict pop function will work differently 
+it will remove those element only which we are mention in pop input field.
+
+
+			       
+>>> name2
+			       
+['Rahul', [1, 2, 3, 4], 14, 'Jan', ('Amdocs', 'Virtusa'), {'Birth': 'Mumbai', 'Work': 'Pune'}, 'Rahul', 1]
+>>> 
+			       
+>>> 
+			       
+>>> name2.pop()
+			       
+1
+>>> 
+
+
+
+
+
+>>> name2
+			       
+['Rahul', [1, 2, 3, 4], 14, 'Jan', ('Amdocs', 'Virtusa'), {'Birth': 'Mumbai', 'Work': 'Pune'}, 'Rahul']
+>>> name2[-3]
+			       
+('Amdocs', 'Virtusa')
+>>> name2[-2]
+			       
+{'Birth': 'Mumbai', 'Work': 'Pune'}
+>>> 
+			       
+>>> 
+			       
+>>> name2[-2].pop("Work")
+			       
+'Pune'
+
+
+
+
+
+Sort function :-
+
+
+if you want to sort the contain of list reversely then use below syntax			       
+>>> a.sort()
+			       
+>>> a
+			       
+['Rahul', 'san', 'zade']
+>>> a.sort(reverse=True)
+			       
+>>> a
+			       
+['zade', 'san', 'Rahul']
+>>> 
+
+
+
+Extend function:-
+
+when you want to copy/append the contain of list1 into list2 then will have to use extend function.
+
+
+e.g 1)
+
+list1=["Rahul",'Shinde',1,2,3]
+list2=list[range(4,10)]
+list2.extend(list1)
+
+
+>>> list2
+			       
+[4, 5, 6, 7, 8, 9, 'Rahul', 'Shinde', 1, 2, 3]
+
+
+
+Insert function:-
+
+when we have insert any value in list at particular position/index then we can used insert function with below option.
+
+insert(index_value,value to be insert)
+
+			       
+>>> list1.insert(2,'Amdocs')
+			       
+>>> list1
+			       
+['Rahul', 'Shinde', 'Amdocs', 1, 2, 3]
+>>> 
+
+
+
+Extra Features of list.
+
+Concatination, and deletion of index_value.
+
+			       
+>>> Rahul=list1 + list2
+			       
+>>> Rahul
+			       
+['Rahul', 'Shinde', 'Amdocs', 1, 2, 3, 4, 5, 6, 7, 8, 9, 'Rahul', 'Shinde', 1, 2, 3, 'Rahul', 'Shinde', 1, 2, 3, 'Rahul', 'Shinde', 1, 2, 3]
+>>> del Rahul[7]
+			       
+>>> Rahul
+			       
+['Rahul', 'Shinde', 'Amdocs', 1, 2, 3, 4, 6, 7, 8, 9, 'Rahul', 'Shinde', 1, 2, 3, 'Rahul', 'Shinde', 1, 2, 3, 'Rahul', 'Shinde', 1, 2, 3]
+>>> 
+
+==========================================================================================================================
+
+
+Tuple:-
+In Tuple we are having two option.
+1)count:- when you want to count number element that are repeately comming in tuple
+
+2)index:- it will provide you the index number of provide element.
+
+			       
+>>> tup
+			       
+('Rahul', 'Jan', 12, 1, 'Aug')
+>>> 
+			       
+
+>>> tup.count("Rahul")
+			       
+1
+>>> tup.index("Aug")
+			       
+4
+
+Deletion of tuple.
+
+>>> a=(1,2,3,4,5)
+			       
+>>> a
+			       
+(1, 2, 3, 4, 5)
+>>> del a
+			       
+>>> a
+			       
+Traceback (most recent call last):
+  File "<pyshell#472>", line 1, in <module>
+    a
+NameError: name 'a' is not defined
+>>> 
+
+
+
+Other option that we can used with tuple.
+
+max() function:- 
+
+used when we want to get max value from tuple. and it works when it contain only string/number.
+combination of string and number won't work with max option.
+
+			       
+>>> a
+			       
+(1, 2, 3, 4, 5)
+>>> print("MAx value for tuple1 :-" ,max(a))
+			       
+MAx value for tuple1 :- 5
+>>> 
+
+
+
+Conversion of tuple to list.
+
+>>> 
+	    
+>>> tup_3=tuple(a)
+	    
+>>> a
+	    
+[1, 2, 3, 4, 5]
+>>> tup_3
+	    
+(1, 2, 3, 4, 5)
+>>> 
+
+
+
+===================================================================================================
+
+
+Dictionary:-
+
+To delete/clear the element from dict
+
+diff between delete and clear is when we used del function,:- it will delete it from python code itself(no longer exist)
+clear:- Remove all element in dict but dict name still exist in system
+
+	    
+>>> del dict_1["Rahul"]
+	    
+>>> dict_1
+	    
+{'Aksh': 'Pune', 'Polaris': (222, 23, 24, 56, 6)}
+>>> dict_1.clear()
+	    
+>>> dict_1
+	    
+{}
+>>> 
+
+
+
+fromkeys:- 
+
+The method fromkeys() creates a new dictionary with keys from seq and values set to value.
+
+fromkeys function used when you want to fetch the list/tuple element as dict key, and value you can provide at the time
+calling fromkeys function.
+
+e.g:-
+>>> a
+	    
+[1, 2, 3, 4, 5]
+>>> DCT=dict.fromkeys(a)
+	    
+>>> DCT
+	    
+{1: None, 2: None, 3: None, 4: None, 5: None}
+>>> DCT=dict.fromkeys(a,10)
+	    
+>>> DCT
+	    
+{1: 10, 2: 10, 3: 10, 4: 10, 5: 10}
+>>> 
+
+
+
+
+get function:-
+
+The method get() returns a value for the given key. If key is not available then returns default value None.
+
+Syntax
+Following is the syntax for get() method −
+
+dict.get(key, default=None)
+Parameters
+key − This is the Key to be searched in the dictionary.
+
+default − This is the Value to be returned in case key does not exist.
+
+
+if particular value is present in dictionary then it will print that one, but the value which is not present
+in dictionary then it will retrieve the default value.
+
+	    
+>>> ABC
+	    
+{1: 10, 232: 10, 3433: 10, 2344: 10, 233: 10, 44: 10}
+>>> 	
+
+	    
+>>> ABC.get(1)
+	    
+10
+>>> ABC.get(10,"Rahul")
+	    
+'Rahul'
+>>> 
+
+
+
+
+
+
+items function:-
+
+The method items() returns a list of dict's (key, value) tuple pairs
+
+>>> a=dict.items()
+	    
+>>> a
+	    
+dict_items([('Rahul', [12, 12, 3, 223, 43]), ('Aksh', 'Pune'), ('Polaris', (222, 23, 24, 56, 6))])
+>>> type(a)
+	    
+<class 'dict_items'>
+>>> 
+
+
+
+
+keys  function:-
+
+when you want to fetch only key value from dictionary then u can used below syntax.
+
+
+	    
+>>> dict_2
+	    
+{'Shinde': ['Rahul', 13, 1]}
+>>> 
+
+>>> dict_2.keys()
+	    
+dict_keys(['Shinde'])
+>>> 
+
+
+setdefault function:-
+
+This method returns the key value available in the dictionary and if given key is not available then
+ it will return provided default value.
+
+if key value is not present in dictionary then it will store the key + default value that you are provide while calling setdefault
+function
+
+>>> dict_2
+	    
+{'Shinde': ['Rahul', 13, 1], 'Rahul': 14, 'San': 21}
+>>> 
+	    
+>>> dict_2.setdefault("Virtusa",14082019)
+	    
+14082019
+>>> dict_2
+	    
+{'Shinde': ['Rahul', 13, 1], 'Rahul': 14, 'San': 21, 'Virtusa': 14082019}
+>>> 
+
+
+================================================================================================
+
+Class in python
+
+e.g 1
+
+class student:
+    def details(self,name,age):
+        self.name = name
+        self.age = age
+
+        print("The name is {} and age is {}".format(name,age))
+
+
+O/P:-
+
+S1= student()
+#S1 is object, if you want to call the method/function in class then use below method
+S1.details("Rahul",25)
+
+The name is Rahul and age is 25
+
+======================================================================================================
+
+e.g 2)
+
+class student:
+    def details(self,name,last_name,mark):
+        self.f_name= name
+        self.l_name = last_name
+        self.s_mark = mark
+        self.email = name + "." + last_name + "@gmail.com"
+        print(" Provided student details as follow:\n Name: ",self.f_name,"\n",
+              "Last Name:",self.l_name,"\n",
+              "Student Percentage",mark,"\n",
+              "Student Email id:= ",self.email)
+
+a1=student()
+a1.details("Rahul","Shinde",90)
+
+O/P:-
+
+>>> 
+
+ Provided student details as follow:
+ Name:  Rahul 
+ Last Name: Shinde 
+ Student Percentage 90 
+ Student Email id:=  Rahul.Shinde@gmail.com
+>>> 
+
+
+============================================================================================================
+e.g 3)
+
+class student:
+    per_raise = 1.05
+    def details(self,name,last_name,mark):
+        self.f_name= name
+        self.l_name = last_name
+        self.s_mark = mark
+        self.email = name + "." + last_name + "@gmail.com"
+        print(" Provided student details as follow:\n Name: ",self.f_name,"\n",
+              "Last Name:",self.l_name,"\n",
+              "Student Percentage",mark,"\n",
+              "Student Email id:= ",self.email)
+
+    def fullname(self):
+        return self.f_name + " " + self.l_name
+
+    def mark_raise(self):
+        self.s_mark = int(self.s_mark * self.per_raise)
+        
+
+       
+
+
+
+a1=student()
+a1.details("Rahul","Shinde",90)
+print(a1.fullname())
+print("Actual percentage :-",a1.s_mark)
+a1.mark_raise()
+print("Percentage after raise :- ",a1.s_mark)
+#print(a1.f_name +" " + a1.l_name)
+print(a1.__dict__)
+
+
+O/P:-
+
+>>> 
+
+ Provided student details as follow:
+ Name:  Rahul 
+ Last Name: Shinde 
+ Student Percentage 90 
+ Student Email id:=  Rahul.Shinde@gmail.com
+Rahul Shinde
+Actual percentage :- 90
+Percentage after raise :-  94
+{'f_name': 'Rahul', 'l_name': 'Shinde', 's_mark': 94, 'email': 'Rahul.Shinde@gmail.com'}
+>>> 
+
+
+
+====================================================================================================
+
+COnstructor in python
+
+def __init__ callled as constructor method, when we create object then method/function which below to constructor 
+automatically called, we don't need to define/call using object.
+
+to inialize the value we used constructor, once we fetch the class into object it will dissplay the constructor message.
+
+COnstructor method automatically called when object is created.
+
+
+
+class student:
+    def details(self,name,age):
+        self.name = name
+        self.age = age
+
+        print("The name is {} and age is {}".format(name,age))
+
+#to inialize the value we used constructor, once we fetch the class into object it will dissplay the constructor message.
+    def __init__(self):
+        print("Welcome to Shinde's family")
+        print("Hope !!! ur doing well")
+
+
+O/P:-
+
+>>> 
+>>> a=student()
+Welcome to Shinde's family
+Hope !!! ur doing well
+>>> 
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+if you want to inialize the value at start then we need to pass the arg value at the time of 
+assign the class to object.
+
+e.g 2)
+
+class student:
+    def details(self,name,age):
+        self.name = name
+        self.age = age
+
+        print("The name is {} and age is {}".format(name,age))
+
+#to inialize the value we used constructor, once we fetch the class into object it will dissplay the constructor message.
+    def __init__(self):
+        print("Welcome to Shinde's family")
+        print("Hope !!! ur doing well")
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+e.g 3)
+
+if you want to fetch value that you assigned in constructor, follow below steps to fetch the value.
+
+class student:
+    def details(self,name,age):
+        self.name = name
+        self.age = age
+
+        print("The name is {} and age is {}".format(name,age))
+
+#to inialize the value we used constructor, once we fetch the class into object it will dissplay the constructor message.
+    def __init__(self):
+        print("Welcome to Shinde's family")
+        print("Hope !!! ur doing well")
+
+class address:
+    def __init__(self,address,area):
+        print("Your current address is {} and stay in {}".format(area,address))
+        
+
+class banking:
+    def __init__(self,name,branch):
+        print("Name of customer {} and bank branch {}".format(name,branch))
+        self.name = name
+        print(name)
+        self.branch= branch
+        print(branch)
+        self.balance= 100
+        self.charge = 0
+        
+        
+O/P:-
+
+>>> c.balance
+100
+>>> 
+>>> c.charge
+0
+>>> 
+
+
+
+#Note only one constructor should we define while creating class. if we are having two __init__ (constructor),
+then it overwrite to first one and in o/p second one will get print.
+
+
+
+class address:
+    def __init__(self,address,area):
+        print("Your current address is {} and stay in {}".format(area,address))
+        
+    
+
+
+O/P:-
+
+>>> 
+>>> 
+>>> c=address("Mumbai","Pune")
+Your current address is Pune and stay in Mumbai
+>>> b=student()
+Welcome to Shinde's family
+Hope !!! ur doing well
+>>> 
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+e.g 4)
+
+To fetch the value from constructor class.
+
+
+class student:
+    def __init__(self,name):
+        self.name = name
+        self.attend = 0
+        self.marks=list()
+        print("Welcome {} to school".format(name))
+    
+
+
+O/P:-
+
+>>> std1.marks
+[]
+>>> std1.name
+'Rahul'
+>>> std1.attend
+0
+>>> std2.name
+'Shailesh'
+>>> std2.attend
+0
+>>> std2.marks
+[]
+>>> 
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+e.g 4)
+
+
+
+class student:
+    def __init__(self,name):
+        self.name = name
+        self.attend = 0
+        self.marks=list()
+        print("Welcome {} to school".format(name))
+
+    def addmarks(self,ma):
+        self.marks.append(ma)
+
+    def attenddays(self,att):
+        print(att,type(att))
+        self.attend = att + self.attend
+
+    def getavg(self):
+        return sum(self.marks)/len(self.marks)
+
+
+>>> 
+>>> s1=student("Rahul")
+Welcome Rahul to school
+>>> s1.name
+'Rahul'
+>>> s1.attend
+0
+>>> s1.marks
+[]
+>>> s1.addmarks(98)
+>>> s1.addmarks(99)
+>>> s1.addmarks(94)
+>>> s1.addmarks(92)
+>>> s1.marks
+[98, 99, 94, 92]
+>>> s1.attenddays(2)
+2 <class 'int'>
+>>> s1.attend
+2
+>>> s1.getavg
+<bound method student.getavg of <__main__.student object at 0x03565DB0>>
+>>> s1.getavg()
+95.75
+>>> 
+
+
+
+=================================================================================================================
+
+
+Inheritance Method
+
+
+
+class student:
+    def emp_details(self):
+        emp_name=input("Enter the emp name")
+        emp_id=input("Enter the emp id")
+        print("Entered emp details {} {}".format(emp_name,emp_id))
+        
+
+#consider you have 100 class in one program and u want create the similar one
+#then use inheritance method
+
+class employee(student):
+    def print(self):
+        student.emp_details(self)
+
+
+O/P:-
+
+>>> s=employee()
+>>> s.emp_details()
+Enter the emp nameRahul
+Enter the emp id86
+Entered emp details Rahul 86
+>>> 
+
+
+
+===============================================================================================
+
+Inheritance Overloading mothod :
+
+class student:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age	
+        print("Provided name is {}".format(name))
+    def __str__(self):
+        return ("name :{}\nage : {}\n".format(self.name,self.age))
+
+class teacher(student):
+    def __init__(self,name,age,sub):
+        student.__init__(self,name,age)
+        self.sub = sub
+
+    def __str__(self):
+        return (student.__str__(self) + "sub : {}".format(self. sub))
+
